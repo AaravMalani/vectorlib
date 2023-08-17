@@ -1,4 +1,4 @@
-from src.vectorlib import Vector
+from vectorlib import Vector
 import pytest
 def test_equal():
     assert Vector(1,2,3) == Vector(1,2,3)
@@ -31,6 +31,6 @@ def test_magnitude():
     assert Vector(3,4,5).magnitude == 5*(2)**0.5
     assert Vector(3,4).magnitude == 5
     assert Vector(100, 240).magnitude == 260
-    
+
     
     
