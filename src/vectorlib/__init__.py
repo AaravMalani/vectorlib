@@ -156,5 +156,13 @@ class Vector:
         return Vector(list(map(lambda x: abs(x), self.__data)))
     def __invert__(self):
         return Vector(list(map(lambda x: ~x, self.__data)))
+    def __round__(self, num_digits:None = None):
+        return Vector(list(map(lambda x: round(x, num_digits), self.__data)))
+    def __trunc__(self):
+        return Vector(list(map(lambda x: math.trunc(x), self.__data)))
+    def __floor__(self):
+        return Vector(list(map(lambda x: math.floor(x), self.__data)))
+    def __ceil__(self):
+        return Vector(list(map(lambda x: math.ceil(x), self.__data)))
     
     
