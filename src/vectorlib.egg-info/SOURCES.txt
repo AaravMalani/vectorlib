@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/vectorlib/__init__.py
+src/vectorlib.egg-info/PKG-INFO
+src/vectorlib.egg-info/SOURCES.txt
+src/vectorlib.egg-info/dependency_links.txt
+src/vectorlib.egg-info/top_level.txt
+tests/test_1.py
