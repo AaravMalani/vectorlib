@@ -1,7 +1,7 @@
 # VectorLib: A library to create and manage vectors in Python.
 ## Installation
 ```sh
-python -m pip install vectorlib
+python -m pip install vectorlib-py
 # or
 python -m pip install git+https://github.com/AaravMalani/vectorlib
 ```

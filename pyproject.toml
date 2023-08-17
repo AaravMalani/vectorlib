@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vectorlib"
+name = "vectorlib-py"
 version = "1.0.0"
 authors = [
   { name="Aarav Malani", email="aarav.malani@gmail.com" },
