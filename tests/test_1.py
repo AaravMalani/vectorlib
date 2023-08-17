@@ -1,5 +1,7 @@
 from vectorlib import Vector
 import pytest
+import math
+
 def test_equal():
     assert Vector(1,2,3) == Vector(1,2,3)
     assert Vector(3,4,5) != Vector(1,2,3)
@@ -32,5 +34,8 @@ def test_magnitude():
     assert Vector(3,4).magnitude == 5
     assert Vector(100, 240).magnitude == 260
 
+def test_angle():
+    assert Vector(1,2,3).angle(Vector(2,4,6)) == 0
+    assert Vector(1,2,3).angle(-Vector(2,4,6)) == math.pi
     
     

@@ -1,6 +1,7 @@
 from __future__ import annotations
 from collections.abc import Iterable
 from itertools import zip_longest
+import math
 
 class Vector:
     def __init__(self, *args):
@@ -133,8 +134,27 @@ class Vector:
 
         # Add n-dimensional cross products
         return Vector(self.__data[1]*other.__data[2]-self.__data[2]*other.__data[1], -self.__data[0]*other.__data[2]+self.__data[2]*other.__data[0], self.__data[0]*other.__data[1]-self.__data[1]*other.__data[0])
-    
+    def angle(self, other: Vector) -> float:
+        """Returns the angle between two vectors
+
+        Args:
+            other (Vector): The second vector
+
+        Returns:
+            float: The angle in radians between the two vectors
+        """
+        return math.acos((self.dot(other))/(self.magnitude*other.magnitude))
     def __repr__(self):
         return 'Vector'+str(tuple(self.__data))
     def __eq__(self, other):
         return isinstance(other, Vector) and self.__data == other.__data
+    def __neg__(self):
+        return Vector(list(map(lambda x: -x, self.__data)))
+    def __pos__(self):
+        return self
+    def __abs__(self):
+        return Vector(list(map(lambda x: abs(x), self.__data)))
+    def __invert__(self):
+        return Vector(list(map(lambda x: ~x, self.__data)))
+    
+    
